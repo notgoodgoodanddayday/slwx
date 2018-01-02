@@ -1,0 +1,101 @@
+.example-container
+    mat-form-field([hintLabel]="'这是hint'")
+        input(matInput="", placeholder="Input")
+    |
+    mat-form-field
+        textarea(matInput="", placeholder="Textarea")
+    |
+    mat-form-field
+        mat-select(placeholder="Mat-Select")
+            mat-option None
+            mat-option([value]="'option'") Option
+
+
+.example-container
+    p Form field with label
+    br
+    form.example-container([formGroup]="options")
+        mat-checkbox(formControlName="hideRequired") Hide required marker
+        |
+        div
+            label Float label: 
+            |
+            mat-radio-group(formControlName="floatLabel")
+                mat-radio-button(value="auto") Auto
+                |
+                mat-radio-button(value="always") Always
+                |
+                mat-radio-button(value="never") Never
+    |
+    mat-form-field([hideRequiredMarker]="options.value.hideRequired", [floatLabel]="options.value.floatLabel")
+        input(matInput="", placeholder="Simple placeholder", required="")
+    |
+    mat-form-field([floatLabel]="options.value.floatLabel")
+        mat-label Both a label and a placeholder
+        |
+        input(matInput="", placeholder="Simple placeholder")
+    |
+    mat-form-field([hideRequiredMarker]="options.value.hideRequired", [floatLabel]="options.value.floatLabel")
+        mat-select(required="")
+            mat-option -- None --
+            |
+            mat-option(value="option") Option
+        |
+        mat-placeholder
+            mat-icon favorite
+            |
+            b  Fancy
+            |
+            i  placeholder
+
+.example-container
+    p Form field with hints
+    mat-form-field(hintLabel="Max 10 characters")
+        input(matInput="", #input="", maxlength="10", placeholder="Enter some input")
+        |
+        mat-hint(align="end") {{input.value?.length || 0}}/10
+    |
+    mat-form-field
+        mat-select(placeholder="Select me")
+            mat-option(value="option") Option
+        |
+        mat-hint(align="end") Here's the dropdown arrow ^
+
+.example-container
+    p Form field with error messages
+    mat-form-field
+        input(matInput="", placeholder="Enter your email", [formControl]="email", required="")
+        |
+        mat-error(*ngIf="email.invalid") {{getErrorMessage()}}
+
+
+.example-container
+    p Form field with prefix & suffix
+    mat-form-field
+        input(matInput="", placeholder="Enter your password", [type]="hide ? 'password' : 'text'")
+        |
+        mat-icon(matSuffix="", (click)="hide = !hide") {{hide ? 'visibility' : 'visibility_off'}}
+    |
+    mat-form-field
+        input.example-right-align(matInput="", placeholder="Amount", type="number")
+        |
+        span(matPrefix="") $ 
+        |
+        span(matSuffix="") .00
+
+
+form.example-container([formGroup]="themingOptions", [style.fontSize.px]="getFontSize()")
+    p Form field theming
+    mat-form-field([color]="themingOptions.value.color")
+        mat-select(placeholder="Color", formControlName="color")
+            mat-option(value="primary") Primary
+            |
+            mat-option(value="accent") Accent
+            |
+            mat-option(value="warn") Warn
+    |
+    mat-form-field([color]="themingOptions.value.color")
+        input(matInput="", type="number", placeholder="Font size (px)", formControlName="fontSize", min="10")
+        |
+        mat-error(*ngIf="themingOptions.get('fontSize')?.invalid") Min size: 10px
+

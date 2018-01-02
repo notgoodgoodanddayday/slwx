@@ -1,25 +1,24 @@
 import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
-import {FormRoutingModule} from "./form-routing.module";
-
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-
+import {FormRoutingModule, Components} from "./form-routing.module";
 import {SharedModule} from "@share/share.module";
-import {CheckboxComponent} from "./checkbox/checkbox.component";
+import {MaterialModule} from "@material/material.module";
+
 import {FormComponent} from "./form.component";
 
 
 @NgModule({
     imports: [
+        FormsModule,
+        ReactiveFormsModule,
         FormRoutingModule,
         SharedModule,
-        MatCheckboxModule,
-        MatDatepickerModule,
+        MaterialModule,
     ],
     declarations: [
         FormComponent,
-        CheckboxComponent,
+        Components,
     ],
     exports: [
 

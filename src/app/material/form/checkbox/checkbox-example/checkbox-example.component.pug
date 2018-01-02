@@ -1,0 +1,26 @@
+mat-card
+    mat-card-content
+        h2.example-h2 Checkbox configuration
+        |
+        section.example-section
+            mat-checkbox.example-margin([(ngModel)]="checked") Checked
+            |
+            mat-checkbox.example-margin([(ngModel)]="indeterminate") Indeterminate
+        |
+        section.example-section
+            label.example-margin Align:
+            |
+            mat-radio-group([(ngModel)]="align")
+                mat-radio-button.example-margin(value="start") Start
+                |
+                mat-radio-button.example-margin(value="end") End
+        |
+        section.example-section
+            mat-checkbox.example-margin([(ngModel)]="disabled") Disabled
+mat-card.result
+    mat-card-content
+        h2.example-h2 Result
+        |
+        section.example-section
+            mat-checkbox.example-margin([(ngModel)]="checked", [(indeterminate)]="indeterminate", [align]="align", [disabled]="disabled")
+                | I'm a checkbox
