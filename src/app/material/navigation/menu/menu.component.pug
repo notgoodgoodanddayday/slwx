@@ -1,0 +1,83 @@
+p menu works!
+
+mat-card
+    mat-card-content
+        button(mat-icon-button="", [matMenuTriggerFor]="menu")
+            mat-icon more_vert
+        mat-menu(#menu="matMenu")
+            button(mat-menu-item="")
+                mat-icon dialpad
+                |
+                span Redial
+            |
+            button(mat-menu-item="", disabled="")
+                mat-icon voicemail
+                |
+                span Check voicemail
+            |
+            button(mat-menu-item="")
+                mat-icon notifications_off
+                |
+                span Disable alerts
+
+br
+mat-card
+    mat-card-content
+        button(mat-button="", [matMenuTriggerFor]="animals") Animal index
+        mat-menu(#animals="matMenu")
+            button(mat-menu-item="", [matMenuTriggerFor]="vertebrates") Vertebrates
+            |
+            button(mat-menu-item="", [matMenuTriggerFor]="invertebrates") Invertebrates
+        mat-menu(#vertebrates="matMenu")
+            button(mat-menu-item="", [matMenuTriggerFor]="fish") Fishes
+            |
+            button(mat-menu-item="", [matMenuTriggerFor]="amphibians") Amphibians
+            |
+            button(mat-menu-item="", [matMenuTriggerFor]="reptiles") Reptiles
+            |
+            button(mat-menu-item="") Birds
+            |
+            button(mat-menu-item="") Mammals
+        mat-menu(#invertebrates="matMenu")
+            button(mat-menu-item="") Insects
+            |
+            button(mat-menu-item="") Molluscs
+            |
+            button(mat-menu-item="") Crustaceans
+            |
+            button(mat-menu-item="") Corals
+            |
+            button(mat-menu-item="") Arachnids
+            |
+            button(mat-menu-item="") Velvet worms
+            |
+            button(mat-menu-item="") Horseshoe crabs
+        mat-menu(#fish="matMenu")
+            button(mat-menu-item="") Baikal oilfish
+            |
+            button(mat-menu-item="") Bala shark
+            |
+            button(mat-menu-item="") Ballan wrasse
+            |
+            button(mat-menu-item="") Bamboo shark
+            |
+            button(mat-menu-item="") Banded killifish
+        mat-menu(#amphibians="matMenu")
+            button(mat-menu-item="") Sonoran desert toad
+            |
+            button(mat-menu-item="") Western toad
+            |
+            button(mat-menu-item="") Arroyo toad
+            |
+            button(mat-menu-item="") Yosemite toad
+        mat-menu(#reptiles="matMenu")
+            button(mat-menu-item="") Banded Day Gecko
+            |
+            button(mat-menu-item="") Banded Gila Monster
+            |
+            button(mat-menu-item="") Black Tree Monitor
+            |
+            button(mat-menu-item="") Blue Spiny Lizard
+            |
+            button(mat-menu-item="", disabled="") Velociraptor
+        

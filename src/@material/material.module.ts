@@ -8,7 +8,11 @@ import {
     MatInputModule,
     MatCardModule,
     MatRadioModule,
-    MatSelectModule, MatIconModule,
+    MatSelectModule,
+    MatIconModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatMenuModule, MatSidenavModule, MatToolbarModule, MatListModule,
 } from '@angular/material';
 
 
@@ -23,7 +27,14 @@ import {
         MatOptionModule,
         MatRadioModule,
         MatSelectModule,
+        MatSliderModule,
+        MatSlideToggleModule,
+        //- navigation
+        MatMenuModule,
+        MatSidenavModule,
+        MatToolbarModule,
         //- layout
+        MatListModule,
         MatCardModule,
         //- icon
         MatIconModule,

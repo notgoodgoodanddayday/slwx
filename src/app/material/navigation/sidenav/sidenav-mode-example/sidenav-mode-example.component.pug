@@ -1,0 +1,20 @@
+mat-sidenav-container.example-container
+    mat-sidenav(#sidenav="", [mode]="mode.value")
+        p
+            | sidenav-mode-example
+        p
+            button(mat-button="", (click)="sidenav.toggle()") Toggle
+    |
+    mat-sidenav-content
+        p
+            button(mat-button="", (click)="sidenav.toggle()") Toggle
+        |
+        p
+            mat-radio-group.example-radio-group([formControl]="mode")
+                label Mode:
+                |
+                mat-radio-button(value="over") Over
+                |
+                mat-radio-button(value="side") Side
+                |
+                mat-radio-button(value="push") Push

@@ -1,0 +1,15 @@
+mat-sidenav-container.example-container
+    mat-sidenav(#sidenav="", mode="side", [(opened)]="opened", (opened)="events.push('open!')", (closed)="events.push('close!')")
+        | Sidenav content
+    |
+    mat-sidenav-content
+        p
+            mat-checkbox([(ngModel)]="opened") sidenav.opened
+        |
+        p
+            button(mat-button="", (click)="sidenav.toggle()") sidenav.toggle()
+        |
+        p Events:
+        |
+        .example-events
+            div(*ngFor="let e of events") {{e}}

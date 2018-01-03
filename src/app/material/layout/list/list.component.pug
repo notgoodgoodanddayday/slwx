@@ -1,0 +1,44 @@
+p list works!
+
+mat-card
+    mat-card-content
+        mat-list(role="list")
+            mat-list-item(role="listitem") Item 1
+            |
+            mat-list-item(role="listitem") Item 2
+            |
+            mat-list-item(role="listitem") Item 3
+
+br
+mat-card
+    mat-card-content
+        mat-selection-list(#shoes="")
+            mat-list-option(*ngFor="let shoe of typesOfShoes")
+                | {{shoe}}
+        p
+            | Options selected: {{shoes.selectedOptions.selected.length}}
+
+br
+mat-card
+    mat-card-content
+        mat-list
+            h3(mat-subheader="") Folders
+            |
+            mat-list-item(*ngFor="let folder of folders")
+                mat-icon(mat-list-icon="") folder
+                |
+                h4(mat-line="") {{folder.name}}
+                |
+                p(mat-line="")  {{folder.updated | date}}
+            |
+            mat-divider
+            |
+            h3(mat-subheader="") Notes
+            |
+            mat-list-item(*ngFor="let note of notes")
+                mat-icon(mat-list-icon="") note
+                |
+                h4(mat-line="") {{note.name}}
+                |
+                p(mat-line="")  {{note.updated | date}}
+        

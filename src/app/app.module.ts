@@ -21,7 +21,8 @@ import {AppRoutingModule} from "./app-routing.module";
         HomeComponent,
     ],
     providers: [
-        { provide: LOCALE_ID, useValue: navigator.language },
+        //- Missing locale data for the locale "zh-CN"
+        // { provide: LOCALE_ID, useValue: navigator.language },
     ],
     bootstrap: [AppComponent]
 })

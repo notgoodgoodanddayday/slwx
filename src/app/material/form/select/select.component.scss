@@ -1,0 +1,24 @@
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+
+
+//- Select with custom panel styling
+.example-panel-red .mat-select-content {
+  background: rgba(255, 0, 0, 0.5);
+}
+.example-panel-green .mat-select-content {
+  background: rgba(0, 255, 0, 0.5);
+}
+.example-panel-blue .mat-select-content {
+  background: rgba(0, 0, 255, 0.5);
+}

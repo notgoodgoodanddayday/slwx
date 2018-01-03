@@ -1,0 +1,43 @@
+p slider works!!
+
+mat-card
+    mat-card-content
+        h2.example-h2 Slider configuration
+        |
+        section.example-colums
+            mat-form-field.example-margin
+                input(matInput="", type="number", placeholder="Value", [(ngModel)]="value")
+            |
+            mat-form-field.example-margin
+                input(matInput="", type="number", placeholder="Min value", [(ngModel)]="min")
+            |
+            mat-form-field.example-margin
+                input(matInput="", type="number", placeholder="Max value", [(ngModel)]="max")
+            |
+            mat-form-field.example-margin
+                input(matInput="", type="number", placeholder="Step size", [(ngModel)]="step")
+        |
+        section.example-colums
+            mat-checkbox.example-margin([(ngModel)]="showTicks") Show ticks
+            |
+            mat-checkbox.example-margin([(ngModel)]="autoTicks", *ngIf="showTicks")
+                | Auto ticks
+            |
+            mat-form-field.example-margin(*ngIf="showTicks && !autoTicks")
+                input(matInput="", type="number", placeholder="Tick interval", [(ngModel)]="tickInterval")
+        |
+        section.example-section
+            mat-checkbox.example-margin([(ngModel)]="thumbLabel") Show thumb label
+        |
+        section.example-section
+            mat-checkbox.example-margin([(ngModel)]="vertical") Vertical
+            |
+            mat-checkbox.example-margin([(ngModel)]="invert") Inverted
+        |
+        section.example-section
+            mat-checkbox.example-margin([(ngModel)]="disabled") Disabled
+mat-card.result
+    mat-card-content
+        h2.example-h2 Result
+        |
+        mat-slider.example-margin([disabled]="disabled", [invert]="invert", [max]="max", [min]="min", [step]="step", [thumb-label]="thumbLabel", [tick-interval]="tickInterval", [(ngModel)]="value", [vertical]="vertical")
