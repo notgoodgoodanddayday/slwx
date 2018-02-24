@@ -2,3 +2,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /*如果需要mat-icon需要引入*/
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+
+/*自定义样式*/
+@import "assets/style/core.scss";

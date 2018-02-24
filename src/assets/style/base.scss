@@ -1,0 +1,52 @@
+body, div, a, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-user-select: text !important;
+  -webkit-tap-highlight-color: transparent;
+}
+*:not(input,textarea) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+html,
+body {
+  max-width: 100vw;
+  height: 100%;
+  //color: @fontColor;
+  //font-size: @smallSize;
+  //background-color: @whiteColor;
+  -webkit-text-size-adjust: 100%;
+}
+a{
+  -webkit-user-select: none;
+}
+a,
+a:link,
+a:hover{
+  //color: @titleColor;
+  text-decoration: none;
+}
+em {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+p {
+  word-wrap: break-word;
+}
+input, textarea{
+  border: none;
+  outline: none;
+}

@@ -12,7 +12,8 @@ import {
     MatIconModule,
     MatSliderModule,
     MatSlideToggleModule,
-    MatMenuModule, MatSidenavModule, MatToolbarModule, MatListModule,
+    MatMenuModule, MatSidenavModule, MatToolbarModule, MatListModule, MatExpansionModule, MatDatepickerModule,
+    MatNativeDateModule, MatGridListModule, MatTabsModule,
 } from '@angular/material';
 
 
@@ -29,13 +30,18 @@ import {
         MatSelectModule,
         MatSliderModule,
         MatSlideToggleModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
         //- navigation
         MatMenuModule,
         MatSidenavModule,
         MatToolbarModule,
         //- layout
         MatListModule,
+        MatGridListModule,
         MatCardModule,
+        MatExpansionModule,
+        MatTabsModule,
         //- icon
         MatIconModule,
     ]
