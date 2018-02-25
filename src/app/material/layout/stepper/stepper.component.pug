@@ -1,0 +1,32 @@
+button#toggle-linear(mat-raised-button="", (click)="isLinear = true") Enable linear mode
+mat-horizontal-stepper([linear]="isLinear", #stepper="matHorizontalStepper")
+    mat-step([stepControl]="firstFormGroup")
+        form([formGroup]="firstFormGroup")
+            ng-template(matStepLabel="") Fill out your name
+            |
+            mat-form-field
+                input(matInput ="", placeholder="Last name, First name", formControlName="firstCtrl", required="")
+            |
+            div
+                button(mat-button="", matStepperNext="") Next
+    |
+    mat-step([stepControl]="secondFormGroup")
+        form([formGroup]="secondFormGroup")
+            ng-template(matStepLabel="") Fill out your address
+            |
+            mat-form-field
+                input(matInput ="", placeholder="Address", formControlName="secondCtrl", required="")
+            |
+            div
+                button(mat-button="", matStepperPrevious="") Back
+                |
+                button(mat-button="", matStepperNext="") Next
+    |
+    mat-step
+        ng-template(matStepLabel="") Done
+        |     You are now done.
+        |
+        div
+            button(mat-button="", matStepperPrevious="") Back
+            |
+            button(mat-button="", (click)="stepper.reset()") Reset

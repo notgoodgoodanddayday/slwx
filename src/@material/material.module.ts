@@ -13,7 +13,7 @@ import {
     MatSliderModule,
     MatSlideToggleModule,
     MatMenuModule, MatSidenavModule, MatToolbarModule, MatListModule, MatExpansionModule, MatDatepickerModule,
-    MatNativeDateModule, MatGridListModule, MatTabsModule,
+    MatNativeDateModule, MatGridListModule, MatTabsModule, MatStepperModule,
 } from '@angular/material';
 
 
@@ -42,6 +42,7 @@ import {
         MatCardModule,
         MatExpansionModule,
         MatTabsModule,
+        MatStepperModule,
         //- icon
         MatIconModule,
     ]

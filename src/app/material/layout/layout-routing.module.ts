@@ -8,6 +8,7 @@ import {DividerComponent} from "./divider/divider.component";
 import {ExpansionPanelComponent} from "./expansion-panel/expansion-panel.component";
 import {GridListComponent} from "./grid-list/grid-list.component";
 import {TabsComponent} from "./tabs/tabs.component";
+import {StepperComponent} from "./stepper/stepper.component";
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path: 'expansion-panel', component: ExpansionPanelComponent, data: {title: 'expansion-panel'}},
     {path: 'grid-list', component: GridListComponent, data: {title: 'grid-list'}},
     {path: 'tabs', component: TabsComponent, data: {title: 'tabs'}},
+    {path: 'stepper', component: StepperComponent, data: {title: 'stepper'}},
 ];
 
 @NgModule({
@@ -37,5 +39,6 @@ export const Components = [
     ExpansionPanelComponent,
     GridListComponent,
     TabsComponent,
+    StepperComponent,
     //- components
 ];
