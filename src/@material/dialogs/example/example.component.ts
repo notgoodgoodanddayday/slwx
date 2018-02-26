@@ -8,15 +8,17 @@ import {MatDialogRef, MAT_DIALOG_DATA} from "@angular/material";
 })
 export class ExampleComponent {
 
+    lastname = "";
+
     constructor(
         public dialogRef: MatDialogRef<ExampleComponent>,
         @Inject(MAT_DIALOG_DATA) public data: any
     ) {
-        console.log(data);
+        this.lastname = data.lastname;
     }
 
     close(): void {
-        this.dialogRef.close();
+        this.dialogRef.close(this.lastname);
     }
 
 }

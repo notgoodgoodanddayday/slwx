@@ -6,6 +6,8 @@ ol
     li
         button(mat-raised-button="", (click)="openDialog()") Pick one
     |
-    li(*ngIf="animal")
-        | You chose:
-        i {{animal}}
+    br
+    |
+    li(*ngIf="lastname")
+        | Your lastname:
+        i {{lastname}}

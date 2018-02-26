@@ -1,2 +1,6 @@
 p hello!!!!
-button(mat-button, (click)="close()") close
+
+mat-form-field
+    input(matInput="", [(ngModel)]="lastname", placeholder="What's your lastname?")
+
+button(mat-button, (click)="close()") ok

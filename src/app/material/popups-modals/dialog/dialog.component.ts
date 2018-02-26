@@ -8,8 +8,8 @@ import {ExampleComponent} from "@material/dialogs/example/example.component";
     styleUrls: ['./dialog.component.scss'],
 })
 export class DialogComponent {
-    animal: string = "默认动物";
-    name: string = "默认名称";
+    lastname: string = "";
+    name: string = "jerry";
 
     @ViewChild(ExampleComponent) example;
 
@@ -19,12 +19,12 @@ export class DialogComponent {
     openDialog(): void {
         let dialogRef = this.dialog.open(ExampleComponent, {
             width: '250px',
-            data: { name: this.name, animal: this.animal }
+            data: { name: this.name, lastname: this.lastname }
         });
 
         dialogRef.afterClosed().subscribe(result => {
             console.log('The dialog was closed');
-            this.animal = result;
+            this.lastname = result;
         });
     }
 }
