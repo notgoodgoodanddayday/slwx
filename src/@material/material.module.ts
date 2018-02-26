@@ -13,7 +13,8 @@ import {
     MatSliderModule,
     MatSlideToggleModule,
     MatMenuModule, MatSidenavModule, MatToolbarModule, MatListModule, MatExpansionModule, MatDatepickerModule,
-    MatNativeDateModule, MatGridListModule, MatTabsModule, MatStepperModule,
+    MatNativeDateModule, MatGridListModule, MatTabsModule, MatStepperModule, MatButtonToggleModule, MatChipsModule,
+    MatProgressBarModule, MatDialogModule,
 } from '@angular/material';
 
 
@@ -22,7 +23,6 @@ import {
         //- form controls
         MatFormFieldModule,
         MatInputModule,
-        MatButtonModule,
         MatCheckboxModule,
         MatAutocompleteModule,
         MatOptionModule,
@@ -43,6 +43,13 @@ import {
         MatExpansionModule,
         MatTabsModule,
         MatStepperModule,
+        //- button-indicators
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatChipsModule,
+        MatProgressBarModule,
+        //- popups-modules
+        MatDialogModule,
         //- icon
         MatIconModule,
     ]

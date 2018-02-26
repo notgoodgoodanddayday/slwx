@@ -7,6 +7,7 @@ import {CoreModule} from "@core/core.module";
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {entryConponents, PopupsModalsModule} from "./material/popups-modals/popups-modals.module";
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {AppRoutingModule} from "./app-routing.module";
         BrowserAnimationsModule,
         AppRoutingModule,
         CoreModule,
+        PopupsModalsModule,
     ],
     declarations: [
         AppComponent,
@@ -23,6 +25,9 @@ import {AppRoutingModule} from "./app-routing.module";
     providers: [
         //- Missing locale data for the locale "zh-CN"
         // { provide: LOCALE_ID, useValue: navigator.language },
+    ],
+    entryComponents: [
+        entryConponents
     ],
     bootstrap: [AppComponent]
 })

@@ -10,6 +10,8 @@ const routes: Routes = [
     {path: 'buttons-indicators', loadChildren: "./buttons-indicators/buttons-indicators.module#ButtonsIndicatorsModule"},
     {path: 'navigation', loadChildren: "./navigation/navigation.module#NavigationModule"},
     {path: 'layout', loadChildren: "./layout/layout.module#LayoutModule"},
+    {path: 'popups-modals', loadChildren: "./popups-modals/popups-modals.module#PopupsModalsModule"},
+
 ];
 
 @NgModule({

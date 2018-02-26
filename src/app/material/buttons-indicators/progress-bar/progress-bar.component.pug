@@ -1,0 +1,48 @@
+mat-card
+    mat-card-content
+        h2.example-h2 Progress bar configuration
+        |
+        section.example-section
+            label.example-margin Color:
+            |
+            mat-radio-group([(ngModel)]="color")
+                mat-radio-button.example-margin(value="primary")
+                    | Primary
+                |
+                mat-radio-button.example-margin(value="accent")
+                    | Accent
+                |
+                mat-radio-button.example-margin(value="warn")
+                    | Warn
+        |
+        section.example-section
+            label.example-margin Mode:
+            |
+            mat-radio-group([(ngModel)]="mode")
+                mat-radio-button.example-margin(value="determinate")
+                    | Determinate
+                |
+                mat-radio-button.example-margin(value="indeterminate")
+                    | Indeterminate
+                |
+                mat-radio-button.example-margin(value="buffer")
+                    | Buffer
+                |
+                mat-radio-button.example-margin(value="query")
+                    | Query
+        |
+        section.example-section(*ngIf="mode == 'determinate' || mode == 'buffer'")
+            label.example-margin Progress:
+            |
+            mat-slider.example-margin([(ngModel)]="value")
+        |
+        section.example-section(*ngIf="mode == 'buffer'")
+            label.example-margin Buffer:
+            |
+            mat-slider.example-margin([(ngModel)]="bufferValue")
+mat-card
+    mat-card-content
+        h2.example-h2 Result
+        |
+        section.example-section
+            mat-progress-bar.example-margin([color]="color", [mode]="mode", [value]="value", [bufferValue]="bufferValue")
