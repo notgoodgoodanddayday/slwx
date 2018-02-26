@@ -3,7 +3,6 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {IndexComponent} from "./index/index.component";
 import {DialogComponent} from "./dialog/dialog.component";
-import {ExampleComponent} from "./dialog/example/example.component";
 
 
 const routes: Routes = [
@@ -24,5 +23,4 @@ export const Components = [
     IndexComponent,
     DialogComponent,
     //- components
-    ExampleComponent,
 ];

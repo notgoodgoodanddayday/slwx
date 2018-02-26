@@ -1,6 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {MatDialog} from "@angular/material";
-import {ExampleComponent} from "./example/example.component";
+import {ExampleComponent} from "@material/dialogs/example/example.component";
 
 @Component({
     selector: 'app-dialog',
@@ -8,8 +8,8 @@ import {ExampleComponent} from "./example/example.component";
     styleUrls: ['./dialog.component.scss'],
 })
 export class DialogComponent {
-    animal: string;
-    name: string;
+    animal: string = "默认动物";
+    name: string = "默认名称";
 
     @ViewChild(ExampleComponent) example;
 
@@ -25,7 +25,6 @@ export class DialogComponent {
         dialogRef.afterClosed().subscribe(result => {
             console.log('The dialog was closed');
             this.animal = result;
-            console.log(result);
         });
     }
 }

@@ -1,13 +1,13 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {NgModule, LOCALE_ID} from '@angular/core';
+import {NgModule} from '@angular/core';
 
 import {CoreModule} from "@core/core.module";
 
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
-import {entryConponents, PopupsModalsModule} from "./material/popups-modals/popups-modals.module";
+import {DialogsModule, DialogEntryComponents} from "../@material/dialogs/dialogs.module";
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import {entryConponents, PopupsModalsModule} from "./material/popups-modals/popu
         BrowserAnimationsModule,
         AppRoutingModule,
         CoreModule,
-        PopupsModalsModule,
+        DialogsModule,
     ],
     declarations: [
         AppComponent,
@@ -27,7 +27,7 @@ import {entryConponents, PopupsModalsModule} from "./material/popups-modals/popu
         // { provide: LOCALE_ID, useValue: navigator.language },
     ],
     entryComponents: [
-        entryConponents
+        DialogEntryComponents,
     ],
     bootstrap: [AppComponent]
 })
