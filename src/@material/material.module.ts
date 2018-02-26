@@ -14,7 +14,8 @@ import {
     MatSlideToggleModule,
     MatMenuModule, MatSidenavModule, MatToolbarModule, MatListModule, MatExpansionModule, MatDatepickerModule,
     MatNativeDateModule, MatGridListModule, MatTabsModule, MatStepperModule, MatButtonToggleModule, MatChipsModule,
-    MatProgressBarModule, MatDialogModule,
+    MatProgressBarModule, MatDialogModule, MatSnackBarModule, MatTooltipModule, MatPaginatorModule, MatSortModule,
+    MatTableModule,
 } from '@angular/material';
 
 
@@ -50,8 +51,14 @@ import {
         MatProgressBarModule,
         //- popups-modules
         MatDialogModule,
+        MatSnackBarModule,
+        MatTooltipModule,
         //- icon
         MatIconModule,
+        //- data-table
+        MatPaginatorModule,
+        MatSortModule,
+        MatTableModule,
     ]
 })
 export class MaterialModule {

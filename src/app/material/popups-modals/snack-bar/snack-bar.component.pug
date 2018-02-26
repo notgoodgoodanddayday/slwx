@@ -1,0 +1,6 @@
+mat-form-field
+    input(matInput="", value="Disco party!", placeholder="Message", #message="")
+mat-form-field
+    input(matInput="", value="Dance", placeholder="Action", #action="")
+    
+button(mat-button="", (click)="openSnackBar(message.value, action.value)") Show snack-bar

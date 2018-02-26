@@ -1,0 +1,22 @@
+table(matSort="", (matSortChange)="sortData($event)")
+    tr
+        th(mat-sort-header="name") Dessert (100g)
+        |
+        th(mat-sort-header="calories") Calories
+        //|
+        //th(mat-sort-header="fat") Fat (g)
+        |
+        th(mat-sort-header="carbs") Carbs (g)
+        //|
+        //th(mat-sort-header="protein") Protein (g)
+    |
+    tr(*ngFor="let dessert of sortedData")
+        td {{dessert.name}}
+        |
+        td {{dessert.calories}}
+        //|
+        //td {{dessert.fat}}
+        |
+        td {{dessert.carbs}}
+        //|
+        //td {{dessert.protein}}

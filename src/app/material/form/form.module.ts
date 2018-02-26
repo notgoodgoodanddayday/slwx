@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import {FormRoutingModule, Components} from "./form-routing.module";
 import {SharedModule} from "@share/share.module";
@@ -10,8 +9,6 @@ import {FormComponent} from "./form.component";
 
 @NgModule({
     imports: [
-        FormsModule,
-        ReactiveFormsModule,
         FormRoutingModule,
         SharedModule,
         MaterialModule,

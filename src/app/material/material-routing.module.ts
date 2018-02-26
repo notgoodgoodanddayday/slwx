@@ -11,7 +11,7 @@ const routes: Routes = [
     {path: 'navigation', loadChildren: "./navigation/navigation.module#NavigationModule"},
     {path: 'layout', loadChildren: "./layout/layout.module#LayoutModule"},
     {path: 'popups-modals', loadChildren: "./popups-modals/popups-modals.module#PopupsModalsModule"},
-
+    {path: 'data-table', loadChildren: "./data-table/data-table.module#DataTableModule"},
 ];
 
 @NgModule({
