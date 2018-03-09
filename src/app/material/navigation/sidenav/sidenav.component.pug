@@ -1,19 +1,20 @@
-p sidenav works!
+.material-wrap
+    p sidenav works!
 
-p
-    a(routerLink="../sidenav-open-close-example") sidenav-open-close-example
-p
-    a(routerLink="../sidenav-mode-example") sidenav-mode-example
+    p
+        a(routerLink="../sidenav-open-close-example") sidenav-open-close-example
+    p
+        a(routerLink="../sidenav-mode-example") sidenav-mode-example
 
-mat-drawer-container.example-container(autosize="")
-    mat-drawer.example-sidenav(#drawer="", mode="side")
-        p Auto-resizing
+    mat-drawer-container.example-container(autosize="")
+        mat-drawer.example-sidenav(#drawer="", mode="side")
+            p Auto-resizing
+            |
+            p(*ngIf="showFiller") Lorem, ipsum dolor sit.
+            |
+            button((click)="showFiller = !showFiller", mat-raised-button="")
+                | Toggle extra text
         |
-        p(*ngIf="showFiller") Lorem, ipsum dolor sit.
-        |
-        button((click)="showFiller = !showFiller", mat-raised-button="")
-            | Toggle extra text
-    |
-    .example-sidenav-content
-        button(type="button", mat-button="", (click)="drawer.toggle()")
-            | Toggle sidenav
+        .example-sidenav-content
+            button(type="button", mat-button="", (click)="drawer.toggle()")
+                | Toggle sidenav

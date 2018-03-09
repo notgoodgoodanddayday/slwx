@@ -1,16 +1,17 @@
-.example-tooltip-host(matTooltip="Tooltip!", [matTooltipPosition]="position")
-    span Show tooltip
-    |
-    mat-form-field
-        mat-select.example-select([(ngModel)]="position")
-            mat-option(value="before") Before
-            |
-            mat-option(value="after") After
-            |
-            mat-option(value="above") Above
-            |
-            mat-option(value="below") Below
-            |
-            mat-option(value="left") Left
-            |
-            mat-option(value="right") Right
+.material-wrap
+    .example-tooltip-host(matTooltip="Tooltip!", [matTooltipPosition]="position")
+        span Show tooltip
+        |
+        mat-form-field
+            mat-select.example-select([(ngModel)]="position")
+                mat-option(value="before") Before
+                |
+                mat-option(value="after") After
+                |
+                mat-option(value="above") Above
+                |
+                mat-option(value="below") Below
+                |
+                mat-option(value="left") Left
+                |
+                mat-option(value="right") Right

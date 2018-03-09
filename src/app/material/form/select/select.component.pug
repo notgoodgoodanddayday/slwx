@@ -1,69 +1,70 @@
-p select works!!
+.material-wrap
+    p select works!!
 
-mat-card
-    mat-form-field
-        mat-select([(value)]="selected")
-            mat-option None
-            |
-            mat-option(value="option1") Option 1
-            |
-            mat-option(value="option2") Option 2
-            |
-            mat-option(value="option3") Option 3
-    p You selected: {{selected}}
-
-br
-
-mat-card
-    mat-card-subtitle
-        | Select with form field features
-    mat-card-content
+    mat-card
         mat-form-field
-            mat-select(placeholder="Favorite animal", [formControl]="animalControl", required)
-                mat-option --
+            mat-select([(value)]="selected")
+                mat-option None
                 |
-                mat-option(*ngFor="let animal of animals", [value]="animal")
-                    | {{animal.name}}
-            |
-            mat-error(*ngIf="animalControl.hasError('required')") Please choose an animal
-            |
-            mat-hint {{animalControl.value?.sound}}
-
-br
-
-mat-card
-    mat-card-subtitle
-        | title Select with multiple selection
-    mat-card-content
-        mat-form-field
-            mat-select(placeholder="Toppings", [formControl]="toppings", multiple="")
-                mat-option(*ngFor="let topping of toppingList", [value]="topping") {{topping}}
-
-br
-
-mat-card
-    mat-card-subtitle
-        | Select with custom trigger text
-    mat-card-content
-        mat-form-field
-            mat-select(placeholder="Toppings", [formControl]="toppings", multiple="")
-                mat-select-trigger
-                    | {{toppings.value ? toppings.value[0] : ''}}
-                    span.example-additional-selection(*ngIf="toppings.value?.length > 1")
-                        | (+{{toppings.value.length - 1}} others)
+                mat-option(value="option1") Option 1
                 |
-                mat-option(*ngFor="let topping of toppingList", [value]="topping") {{topping}}
-
-br
-
-mat-card
-    mat-card-subtitle
-        | Select with custom panel styling
-    mat-card-content
-        mat-form-field
-            mat-select(placeholder="Panel color", [formControl]="panelColor", panelClass="example-panel-{{panelColor.value}}")
-                mat-option(value="red") Red
+                mat-option(value="option2") Option 2
                 |
-                mat-option(value="green") Green
+                mat-option(value="option3") Option 3
+        p You selected: {{selected}}
+
+    br
+
+    mat-card
+        mat-card-subtitle
+            | Select with form field features
+        mat-card-content
+            mat-form-field
+                mat-select(placeholder="Favorite animal", [formControl]="animalControl", required)
+                    mat-option --
+                    |
+                    mat-option(*ngFor="let animal of animals", [value]="animal")
+                        | {{animal.name}}
                 |
-                mat-option(value="blue") Blue
+                mat-error(*ngIf="animalControl.hasError('required')") Please choose an animal
+                |
+                mat-hint {{animalControl.value?.sound}}
+
+    br
+
+    mat-card
+        mat-card-subtitle
+            | title Select with multiple selection
+        mat-card-content
+            mat-form-field
+                mat-select(placeholder="Toppings", [formControl]="toppings", multiple="")
+                    mat-option(*ngFor="let topping of toppingList", [value]="topping") {{topping}}
+
+    br
+
+    mat-card
+        mat-card-subtitle
+            | Select with custom trigger text
+        mat-card-content
+            mat-form-field
+                mat-select(placeholder="Toppings", [formControl]="toppings", multiple="")
+                    mat-select-trigger
+                        | {{toppings.value ? toppings.value[0] : ''}}
+                        span.example-additional-selection(*ngIf="toppings.value?.length > 1")
+                            | (+{{toppings.value.length - 1}} others)
+                    |
+                    mat-option(*ngFor="let topping of toppingList", [value]="topping") {{topping}}
+
+    br
+
+    mat-card
+        mat-card-subtitle
+            | Select with custom panel styling
+        mat-card-content
+            mat-form-field
+                mat-select(placeholder="Panel color", [formControl]="panelColor", panelClass="example-panel-{{panelColor.value}}")
+                    mat-option(value="red") Red
+                    |
+                    mat-option(value="green") Green
+                    |
+                    mat-option(value="blue") Blue

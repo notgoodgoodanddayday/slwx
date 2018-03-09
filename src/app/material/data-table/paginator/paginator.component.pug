@@ -1,18 +1,19 @@
-mat-form-field
-    | List length:
-    input(matInput="", [(ngModel)]="length")
-mat-form-field
-    | Page size:
-    input(matInput="", [(ngModel)]="pageSize")
-mat-form-field
-    | Page size options:
-    input(matInput="", [ngModel]="pageSizeOptions", (ngModelChange)="setPageSizeOptions($event)")
-mat-paginator([length]="length", [pageSize]="pageSize", [pageSizeOptions]="pageSizeOptions", (page)="pageEvent = $event")
-div(*ngIf="pageEvent")
-    h5 Page Change Event Properties
-    |
-    div List length: {{pageEvent.length}}
-    |
-    div Page size: {{pageEvent.pageSize}}
-    |
-    div Page index: {{pageEvent.pageIndex}}
+.material-wrap
+    mat-form-field
+        | List length:
+        input(matInput="", [(ngModel)]="length")
+    mat-form-field
+        | Page size:
+        input(matInput="", [(ngModel)]="pageSize")
+    mat-form-field
+        | Page size options:
+        input(matInput="", [ngModel]="pageSizeOptions", (ngModelChange)="setPageSizeOptions($event)")
+    mat-paginator([length]="length", [pageSize]="pageSize", [pageSizeOptions]="pageSizeOptions", (page)="pageEvent = $event")
+    div(*ngIf="pageEvent")
+        h5 Page Change Event Properties
+        |
+        div List length: {{pageEvent.length}}
+        |
+        div Page size: {{pageEvent.pageSize}}
+        |
+        div Page index: {{pageEvent.pageIndex}}

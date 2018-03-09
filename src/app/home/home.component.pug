@@ -1,7 +1,8 @@
-p welcome home!
 
-p
-    a(routerLink="/redirect/404") 跳转404
-
-p
-    a(routerLink="/material") material
+mat-grid-list(cols="3", rowHeight="124px")
+    mat-grid-tile(
+    *ngFor="let menu of menus",
+    [routerLink]="menu.url",
+    [colspan]="1",
+    [rowspan] = "1",
+    [style.background] = "menu.backgroundColor") {{menu.title}}

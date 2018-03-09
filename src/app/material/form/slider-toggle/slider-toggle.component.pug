@@ -1,31 +1,32 @@
-p slider works!!
+.material-wrap
+    p slider works!!
 
-mat-card
-    mat-card-content
-        h2.example-h2 Slider configuration
-        |
-        section.example-section
-            label.example-margin Color:
+    mat-card
+        mat-card-content
+            h2.example-h2 Slider configuration
             |
-            mat-radio-group([(ngModel)]="color")
-                mat-radio-button.example-margin(value="primary")
-                    | Primary
+            section.example-section
+                label.example-margin Color:
                 |
-                mat-radio-button.example-margin(value="accent")
-                    | Accent
-                |
-                mat-radio-button.example-margin(value="warn")
-                    | Warn
-        |
-        section.example-section
-            mat-checkbox.example-margin([(ngModel)]="checked") Checked
-        |
-        section.example-section
-            mat-checkbox.example-margin([(ngModel)]="disabled") Disabled
-mat-card.result
-    mat-card-content
-        h2.example-h2 Result
-        |
-        section.example-section
-            mat-slide-toggle.example-margin([color]="color", [checked]="checked", [disabled]="disabled")
-                | Slide me!
+                mat-radio-group([(ngModel)]="color")
+                    mat-radio-button.example-margin(value="primary")
+                        | Primary
+                    |
+                    mat-radio-button.example-margin(value="accent")
+                        | Accent
+                    |
+                    mat-radio-button.example-margin(value="warn")
+                        | Warn
+            |
+            section.example-section
+                mat-checkbox.example-margin([(ngModel)]="checked") Checked
+            |
+            section.example-section
+                mat-checkbox.example-margin([(ngModel)]="disabled") Disabled
+    mat-card.result
+        mat-card-content
+            h2.example-h2 Result
+            |
+            section.example-section
+                mat-slide-toggle.example-margin([color]="color", [checked]="checked", [disabled]="disabled")
+                    | Slide me!

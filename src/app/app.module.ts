@@ -8,6 +8,7 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {DialogsModule, DialogEntryComponents} from "../@material/dialogs/dialogs.module";
+import {MaterialModule} from "@material/material.module";
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {DialogsModule, DialogEntryComponents} from "../@material/dialogs/dialogs
         AppRoutingModule,
         CoreModule,
         DialogsModule,
+        MaterialModule,
     ],
     declarations: [
         AppComponent,

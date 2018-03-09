@@ -7,10 +7,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+    menus = [
+        {url: '/material', title: 'material', backgroundColor: 'lightblue'},
+        {url: '/material', title: '日记', backgroundColor: 'lightblue'},
+        {url: '/material', title: '万象', backgroundColor: 'lightblue'},
+    ];
+
     constructor() {
     }
 
     ngOnInit() {
+
+
     }
 
 }

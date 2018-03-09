@@ -1,13 +1,14 @@
-ol
-    li
-        mat-form-field
-            input(matInput="", [(ngModel)]="name", placeholder="What's your name?")
-    |
-    li
-        button(mat-raised-button="", (click)="openDialog()") Pick one
-    |
-    br
-    |
-    li(*ngIf="lastname")
-        | Your lastname:
-        i {{lastname}}
+.material-wrap
+    ol
+        li
+            mat-form-field
+                input(matInput="", [(ngModel)]="name", placeholder="What's your name?")
+        |
+        li
+            button(mat-raised-button="", (click)="openDialog()") Pick one
+        |
+        br
+        |
+        li(*ngIf="lastname")
+            | Your lastname:
+            i {{lastname}}

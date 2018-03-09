@@ -1,7 +1,7 @@
-p radio-button works!!
+.material-wrap
+    p radio-button works!!
 
-
-mat-radio-group.example-radio-group([(ngModel)]="favoriteSeason")
-    mat-radio-button.example-radio-button(*ngFor="let season of seasons", [value]="season")
-        | {{season}}
-.example-selected-value Your favorite season is: {{favoriteSeason}}
+    mat-radio-group.example-radio-group([(ngModel)]="favoriteSeason")
+        mat-radio-button.example-radio-button(*ngFor="let season of seasons", [value]="season")
+            | {{season}}
+    .example-selected-value Your favorite season is: {{favoriteSeason}}

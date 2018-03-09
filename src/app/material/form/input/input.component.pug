@@ -1,91 +1,92 @@
-p Input works!!
+.material-wrap
+    p Input works!!
 
-form.example-form
-    mat-form-field.example-full-width
-        input(matInput="", placeholder="Favorite food", value="Sushi")
-    |
-    mat-form-field.example-full-width
-        textarea(matInput="", placeholder="Autosize textarea", matTextareaAutosize, [matAutosizeMinRows]="3", [matAutosizeMaxRows]="5")
-
-p
-    mat-form-field.example-full-width
-        input(matInput="", type="date", placeholder="date")
-p
-    mat-form-field.example-full-width
-        input(matInput="", type="number", placeholder="number")
-p
-    mat-form-field.example-full-width
-        input(matInput="", type="search", placeholder="search")
-p
-    mat-form-field.example-full-width
-        input(matInput="", type="email", placeholder="email 验证及错误提示", [formControl]="emailFormCtrl", required)
-        mat-error(*ngIf="emailFormCtrl.hasError('required')")
-            | email不能为空
-        mat-error(*ngIf="emailFormCtrl.hasError('email') && !emailFormCtrl.hasError('required')")
-            | email格式不正确
-
-p for example
-
-form.example-form
-    p 使用matInput的errorStateMatcher属性，覆盖（默认情况下，当控件无效并且用户与元素进行了交互（触摸）或父表单已经提交时，将显示这些错误消息。）
-    mat-form-field.example-full-width
-        input(matInput="", placeholder="Email", [formControl]="emailFormControl", [errorStateMatcher]="matcher")
+    form.example-form
+        mat-form-field.example-full-width
+            input(matInput="", placeholder="Favorite food", value="Sushi")
         |
-        mat-hint Errors appear instantly!
-        |
-        mat-error(*ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')")
-            | Please enter a valid email address
-        |
-        mat-error(*ngIf="emailFormControl.hasError('required')")
-            | Email is
-            strong required
+        mat-form-field.example-full-width
+            textarea(matInput="", placeholder="Autosize textarea", matTextareaAutosize, [matAutosizeMinRows]="3", [matAutosizeMaxRows]="5")
 
-form.example-form
-    mat-form-field.example-full-width
-        input(matInput="", #message="", maxlength="256", placeholder="align，文字布局")
-        |
-        mat-hint(align="start")
-            strong Don't disclose personal info
-        |
-        mat-hint(align="end") {{message.value.length}} / 256
-
-form.example-form
-    mat-form-field.example-full-width
-        span(matPrefix="") +1  
-        |
-        input(type="tel", matInput="", placeholder="加前缀、后缀")
-        |
-        span(matSuffix="") 天/d
-
-
-p Inputs in a form
-form.example-form
-    mat-form-field.example-full-width
-        input(matInput="", placeholder="Company (disabled)", disabled="", value="Google")
-    |
-    table.example-full-width(cellspacing="0")
-        tr
-            td
-                mat-form-field.example-full-width
-                    input(matInput="", placeholder="First name")
-            |
-            td
-                mat-form-field.example-full-width
-                    input(matInput="", placeholder="Long Last Name That Will Be Truncated")
-    |
     p
         mat-form-field.example-full-width
-            textarea(matInput="", placeholder="Address") 1600 Amphitheatre Pkwy
-        |
+            input(matInput="", type="date", placeholder="date")
+    p
         mat-form-field.example-full-width
-            textarea(matInput="", placeholder="Address 2")
-    |
-    table.example-full-width(cellspacing="0")
-        tr
-            td
-                mat-form-field.example-full-width
-                    input(matInput="", placeholder="City")
+            input(matInput="", type="number", placeholder="number")
+    p
+        mat-form-field.example-full-width
+            input(matInput="", type="search", placeholder="search")
+    p
+        mat-form-field.example-full-width
+            input(matInput="", type="email", placeholder="email 验证及错误提示", [formControl]="emailFormCtrl", required)
+            mat-error(*ngIf="emailFormCtrl.hasError('required')")
+                | email不能为空
+            mat-error(*ngIf="emailFormCtrl.hasError('email') && !emailFormCtrl.hasError('required')")
+                | email格式不正确
+
+    p for example
+
+    form.example-form
+        p 使用matInput的errorStateMatcher属性，覆盖（默认情况下，当控件无效并且用户与元素进行了交互（触摸）或父表单已经提交时，将显示这些错误消息。）
+        mat-form-field.example-full-width
+            input(matInput="", placeholder="Email", [formControl]="emailFormControl", [errorStateMatcher]="matcher")
             |
-            td
-                mat-form-field.example-full-width
-                    input(matInput="", placeholder="State")
+            mat-hint Errors appear instantly!
+            |
+            mat-error(*ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')")
+                | Please enter a valid email address
+            |
+            mat-error(*ngIf="emailFormControl.hasError('required')")
+                | Email is
+                strong required
+
+    form.example-form
+        mat-form-field.example-full-width
+            input(matInput="", #message="", maxlength="256", placeholder="align，文字布局")
+            |
+            mat-hint(align="start")
+                strong Don't disclose personal info
+            |
+            mat-hint(align="end") {{message.value.length}} / 256
+
+    form.example-form
+        mat-form-field.example-full-width
+            span(matPrefix="") +1  
+            |
+            input(type="tel", matInput="", placeholder="加前缀、后缀")
+            |
+            span(matSuffix="") 天/d
+
+
+    p Inputs in a form
+    form.example-form
+        mat-form-field.example-full-width
+            input(matInput="", placeholder="Company (disabled)", disabled="", value="Google")
+        |
+        table.example-full-width(cellspacing="0")
+            tr
+                td
+                    mat-form-field.example-full-width
+                        input(matInput="", placeholder="First name")
+                |
+                td
+                    mat-form-field.example-full-width
+                        input(matInput="", placeholder="Long Last Name That Will Be Truncated")
+        |
+        p
+            mat-form-field.example-full-width
+                textarea(matInput="", placeholder="Address") 1600 Amphitheatre Pkwy
+            |
+            mat-form-field.example-full-width
+                textarea(matInput="", placeholder="Address 2")
+        |
+        table.example-full-width(cellspacing="0")
+            tr
+                td
+                    mat-form-field.example-full-width
+                        input(matInput="", placeholder="City")
+                |
+                td
+                    mat-form-field.example-full-width
+                        input(matInput="", placeholder="State")

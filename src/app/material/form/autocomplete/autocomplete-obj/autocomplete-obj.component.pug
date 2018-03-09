@@ -1,7 +1,8 @@
-form.example-form
-    mat-form-field.example-full-width
-        input(type="text", placeholder="Assignee", aria-label="Assignee", matInput="", [formControl]="myControl", [matAutocomplete]="auto")
-        |
-        mat-autocomplete(#auto="matAutocomplete", [displayWith]="displayFn")
-            mat-option(*ngFor="let option of filteredOptions | async", [value]="option")
-                | {{ option.name }}
+.material-wrap
+    form.example-form
+        mat-form-field.example-full-width
+            input(type="text", placeholder="Assignee", aria-label="Assignee", matInput="", [formControl]="myControl", [matAutocomplete]="auto")
+            |
+            mat-autocomplete(#auto="matAutocomplete", [displayWith]="displayFn")
+                mat-option(*ngFor="let option of filteredOptions | async", [value]="option")
+                    | {{ option.name }}
